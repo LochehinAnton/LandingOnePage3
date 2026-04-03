@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -27,9 +28,21 @@ body {
   box-shadow: 0 30px 80px rgba(0,0,0,0.08);
 }
 
+.photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
 .content {
   padding: 26px 24px 28px;
   text-align: center;
+}
+
+.logo {
+  width: 120px;
+  margin: 0 auto 18px;
+  display: block;
 }
 
 p {
@@ -51,6 +64,7 @@ p {
   border-radius: 14px;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .btn-primary {
@@ -58,27 +72,56 @@ p {
   color: #fff;
 }
 
+.btn-primary:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
 .btn-outline {
   border: 1px solid #ddd;
   color: #111;
+}
+
+.btn-outline:hover {
+  background: #f7f7f7;
 }
 
 .links {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-top: 10px;
 }
 
 .links a {
   text-decoration: none;
   color: #444;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.links a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  filter: grayscale(1) brightness(0);
+  opacity: 0.7;
 }
 
 .footer {
   margin-top: 18px;
   font-size: 11px;
   color: #aaa;
+  letter-spacing: 0.5px;
 }
 </style>
 </head>
@@ -87,7 +130,11 @@ p {
 
 <main class="card">
 
+<img class="photo" src="photo.jpg" />
+
 <section class="content">
+
+<img class="logo" src="logo.jpg" />
 
 <p>
 Студия архитектуры и дизайна интерьера «АрхиТип».<br>
@@ -100,10 +147,25 @@ p {
 </div>
 
 <nav class="links">
-<a href="https://www.instagram.com/architype.pro/" target="_blank">Instagram</a>
-<a href="https://wa.me/79270042920" target="_blank">WhatsApp</a>
-<a href="https://vk.com/architype_pro" target="_blank">VK</a>
-<a href="https://www.youtube.com/@ArchiType_Interior" target="_blank">YouTube</a>
+<a href="https://www.instagram.com/architype.pro/" target="_blank">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" />
+Instagram
+</a>
+
+<a href="https://wa.me/79270042920" target="_blank">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" />
+WhatsApp
+</a>
+
+<a href="https://vk.com/architype_pro" target="_blank">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vk.svg" />
+VK
+</a>
+
+<a href="https://www.youtube.com/@ArchiType_Interior" target="_blank">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" />
+YouTube
+</a>
 </nav>
 
 <div class="footer">ARCHITYPE STUDIO</div>
